@@ -1,7 +1,7 @@
 <?php
 
 date_default_timezone_set("America/New_York");
-require_once($_SERVER['DOCUMENT_ROOT'].'/destiny/smarty/libs/Smarty.class.php');
+require_once('./smarty/libs/Smarty.class.php');
 $smarty = new Smarty();
 
 include('dataCleanup.php');
