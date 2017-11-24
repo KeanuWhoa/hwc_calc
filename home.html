@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HWC Calculator Home</title>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet"> 
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+{$months = ['January','February','March','April','May','June','July','August','September','October','November','December']}
+<div class="historicalReturns">
+	<h1>Historic Returns</h1>
+	{foreach from=$fundYears item=years}
+	{if $years != "1969"} {* WHYYYYYY *}
+	<div class="returnsSection">
+		<div class="years">
+			<p>{$years}</p>
+		</div>
+		<div class="row">
+			{foreach from=$months item=month}
+			<div class="container">
+				<p class="months">{$month}</p>
+				{foreach from=$historicalReturns item=output}
+					{if $years == $output.period|date_format:"%Y"}
+						{if $month == $output.period|date_format:"%B"}
+							<div class="returns" {if $output.returns|strstr:"-"}id='negative'{/if}>
+								{$output.returns}
+							</div>
+						{/if}
+					{/if}
+				{/foreach}
+			</div>
+			{/foreach}
+		</div>
+	</div>
+	{/if}
+	{/foreach}
+</div>
+	
+</body>
+</html>
