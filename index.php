@@ -30,7 +30,7 @@ $smarty->assign('fundBenchmark', $fundBenchmark);
 $smarty->assign('historicalReturns', $historicalReturns);
 $smarty->assign('fundYears', $fundYears);
 
-$pageID = trim($_SERVER['REQUEST_URI'], 'hcocalc/');
+$pageID = trim($_SERVER['REQUEST_URI'], 'hwcalc/hwc_calc');
 if($pageID == ""){
 	$pageID = "home";
 }
