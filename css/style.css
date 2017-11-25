@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{margin:0;padding:0;font-family:'Open Sans';}
+p{margin:0;padding:0;}
+
+.historicalReturns{
+	display:flex;
+	width:75%;
+	position:relative;
+	margin:0 auto;
+	flex-direction:column;
+	align-items:center;
+	visibility:hidden;
+}
+
+.returnsSection{margin-bottom:25px;padding:5px 15px;border:1px solid transparent;}
+.returnsSection:nth-of-type(even){background-color:rgba(0,0,0,.05)}
+.returnsSection:hover{border:1px solid #000;}
+
+.returnsSection .row{display:flex;}
+
+.returnsSection .row .returns{margin:5px 10px;font-size:14px;}
+
+.returnsSection .row .container{display:flex;flex-direction:column;align-items:center;}
+
+.years{margin-bottom:15px;}
+.years p{font-weight:bold;font-size:16px;}
+
+.months{margin:5px 10px;font-size:14px;font-weight:bold;}
+
+#negative{color:red;}

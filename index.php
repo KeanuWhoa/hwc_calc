@@ -4,7 +4,7 @@ date_default_timezone_set("America/New_York");
 require_once('./smarty/libs/Smarty.class.php');
 $smarty = new Smarty();
 
-include('dataCleanup.php');
+include('./calculator/dataCleanup.php');
 
 $excelData = new dataCleanup('returns.csv');
 
@@ -30,11 +30,11 @@ $smarty->assign('fundBenchmark', $fundBenchmark);
 $smarty->assign('historicalReturns', $historicalReturns);
 $smarty->assign('fundYears', $fundYears);
 
-$pageID = trim($_SERVER['REQUEST_URI'], 'hwcalc/hwc_calc');
+$pageID = trim($_SERVER['REQUEST_URI'], '/hcocalc/hwc_calc/');
 if($pageID == ""){
 	$pageID = "home";
 }
-$smarty->display($pageID.'.html');
+$smarty->display('./templates/'.$pageID.'.html');
 
 ?>
 <!--
