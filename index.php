@@ -5,36 +5,61 @@ require_once('./smarty/libs/Smarty.class.php');
 $smarty = new Smarty();
 
 include('./calculator/dataCleanup.php');
+include('./calculator/calculator.php');
 
+/* Excel Data being used for the calculator */
 $excelData = new dataCleanup('returns.csv');
+/* ----------------- */
 
-$fundPeriod = array_reverse($excelData->getYears());
-$fundReturns = array_reverse($excelData->getReturns());
-$fundBenchmark = array_reverse($excelData->getBenchmark());
+/* Returning the data we need */
+$fundPeriod = $excelData->getYears();
+$fundReturns = $excelData->getReturns();
+$fundBenchmark = $excelData->getBenchmark();
+/* ----------------- */
 
+/* Girth measuring */
+$length = sizeof($fundReturns);
+$length_bm = sizeof($fundBenchmark);
+/* ----------------- */
+
+/* Calculator Things */
+$fundCalc = new geoCalculator($fundReturns);
+$fundGeoMean = $fundCalc->getGeoMean($length);
+$fundCAGR = $fundCalc->getCAGR($length);
+/* ----------------- */
+
+/* Combining the data for easy Smarty use */
 $historicalReturns = array();
 foreach($fundPeriod as $i => $val){
 	$historicalReturns[$i]["period"] = $val;
 	$historicalReturns[$i]["returns"] = $fundReturns[$i];
 }
+/* ----------------- */
 
+/* Getting the set of years from the data */
 $fundYears = array();
 foreach($fundPeriod as $val){
 	$fundYears[] = date("Y", $val);
 }
-$fundYears = array_unique($fundYears);
+$fundYears = array_unique($fundYears); // don't want dupes
+/* ----------------- */
 
+/* SMARTY VARIABLE THINGS */
 $smarty->assign('fundPeriod', $fundPeriod);
 $smarty->assign('fundReturns', $fundReturns);
 $smarty->assign('fundBenchmark', $fundBenchmark);
 $smarty->assign('historicalReturns', $historicalReturns);
 $smarty->assign('fundYears', $fundYears);
+/* ----------------- */
 
+/* Setting up Smarty page system, nothing cool here */
 $pageID = trim($_SERVER['REQUEST_URI'], '/hcocalc/hwc_calc/');
 if($pageID == ""){
 	$pageID = "home";
 }
-$smarty->display('./templates/'.$pageID.'.html');
+/* ----------------- */
+
+$smarty->display('./templates/'.$pageID.'.html'); //this is why we can't have nice things
 
 ?>
 <!--
