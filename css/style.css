@@ -1,20 +1,58 @@
 @charset "utf-8";
 /* CSS Document */
 
-body{margin:0;padding:0;font-family:'Open Sans';}
+body{margin:0;padding:0;font-family:'Open Sans';font-size:16px;}
 p{margin:0;padding:0;}
+a{color:inherit;}
 
-.historicalReturns{
-	display:flex;
-	width:75%;
+.contentContainer{
 	position:relative;
+	width:calc(80% - 50px);
 	margin:0 auto;
+	padding:15px 25px;
+	display:flex;
 	flex-direction:column;
 	align-items:center;
-	visibility:hidden;
 }
 
-.returnsSection{margin-bottom:25px;padding:5px 15px;border:1px solid transparent;}
+.calcMenu a{
+	text-transform:uppercase;
+	text-decoration:none;
+	font-weight:bold;
+	margin-right: 15px;
+	padding:5px 10px;
+}
+.calcMenu a:hover{border-bottom:3px solid #000;}
+.calcMenu .active{background-color:rgba(0,0,0,.05);}
+
+.hwcCalc{/* "first-of-class" */
+	opacity:1;
+	visibility:visible;
+	transition:.25s all ease;
+	display:flex;
+	flex-direction:column;
+	width:75%;
+	position:absolute;
+	align-items:center;
+}
+.hwcCalc ~ .hwcCalc{
+	opacity:0;
+	visibility:hidden;
+	transition:.25s all ease;
+	display:flex;
+	flex-direction:column;
+	width:75%;
+	position:absolute;
+	align-items:center;
+} /* default behavior */
+
+.historicReturns{
+	flex-direction:column-reverse;
+}
+
+.historicReturns h1:first-child{order:1;} /* dat fancy new shit */
+
+.returnsSection{margin-bottom:25px;padding:5px 15px;border:1px solid transparent;transition:.05s all ease;}
 .returnsSection:nth-of-type(even){background-color:rgba(0,0,0,.05)}
 .returnsSection:hover{border:1px solid #000;}
 
@@ -25,8 +63,17 @@ p{margin:0;padding:0;}
 .returnsSection .row .container{display:flex;flex-direction:column;align-items:center;}
 
 .years{margin-bottom:15px;}
-.years p{font-weight:bold;font-size:16px;}
+.years p{font-weight:bold;}
 
 .months{margin:5px 10px;font-size:14px;font-weight:bold;}
+
+.quantStats p{width:50%;padding-top:5px;padding-bottom:5px;border:1px solid #000;transition:.05s all ease;}
+.quantStats p:nth-of-type(even){background-color:rgba(0,0,0,.05);border-top:none;border-bottom:none;}
+.quantStats p:last-child{border-bottom:1px solid #000;}
+.quantStats p:hover{background-color:rgba(0, 191, 255, .05);}
+
+.quantStats span{display:inline-block;width:calc(50% - 10px);}
+.quantStats p > span:first-child{font-weight:bold;padding-left:5px;}
+.quantStats p > span:last-child{font-size:15px;font-weight:normal;position:relative;text-align:right;}
 
 #negative{color:red;}

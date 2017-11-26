@@ -5,12 +5,18 @@
 <title>HWC Calculator Home</title>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet"> 
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/jquery_3.2.1.js"></script>
 </head>
 
 <body>
-	
+<div class="calcMenu">
+	<a href="javascript:void(0);" id="historicReturns" class="active">Historic Returns</a>
+	<a href="javascript:void(0);" id="returnStats">Return Stats</a>
+	<a href="javascript:void(0);" id="quantStats">Quant Stats</a>
+</div>
+<div class="contentContainer">
 {$months = ['January','February','March','April','May','June','July','August','September','October','November','December']}
-<div class="historicalReturns">
+<div class="historicReturns hwcCalc">
 	<h1>Historic Returns</h1>
 	{foreach from=$fundYears item=years}
 	{if $years != "1969"} {* WHYYYYYY *}
@@ -39,5 +45,49 @@
 	{/foreach}
 </div>
 	
+<div class="quantStats hwcCalc">
+	<h1>Quant Stats</h1>
+	{* TODO: further refine for one line of code here ... array with quant stats!!!! *}
+	<p><span>CAGR:</span> <span>{$calc.cagr|round:2|string_format:"%.2f"}%</span></p>
+	<p><span>Geometric Mean:</span> <span>{$calc.geomean|round:2|string_format:"%.2f"}%</span></p>
+	<p><span>Sharpe Ratio:</span> <span>{$calc.sharpe|round:2|string_format:"%.2f"}</span></p>
+	<p><span>Sharpe Ratio (Annualized):</span> <span>{$calc.sharpeAnn|round:2|string_format:"%.2f"}</span></p>
+	<p><span>Sortino:</span> <span>{$calc.sortino|round:2|string_format:"%.2f"}</span></p>
+	<p><span>Sortino (Annualized):</span> <span>{$calc.sortinoAnn|round:2|string_format:"%.2f"}</span></p>
+	<p><span>Jensen's Alpha:</span> <span>{$calc.jenAlpha|round:2|string_format:"%.2f"}</span></p>
+	<p><span>Jensen's Alpha (Monthly):</span> <span>{$calc.jenAlphaMn|round:2|string_format:"%.2f"}</span></p>
+	<p><span>Standard Deviation:</span> <span>{$calc.stdDev|round:2|string_format:"%.2f"}%</span></p>
+	<p><span>Standard Deviation (Annualized):</span> <span>{$calc.stdDevAnn|round:2|string_format:"%.2f"}%</span></p>
+	<p><span>Downside Deviation:</span> <span>{$calc.dwnsideDev|round:2|string_format:"%.2f"}%</span></p>
+	<p><span>Downside Deviation (Annualized):</span> <span>{$calc.dwnsideDevAnn|round:2|string_format:"%.2f"}%</span></p>
+</div>
+
+</div>
+<script>
+	$('document').ready(function(){
+		$('.calcMenu a').click(function(){
+			var id = $(this).attr('id');
+			$('.calcMenu a').each(function(){
+				if($(this).hasClass('active') == true && $(this).attr('id') != id){
+					$(this).removeClass('active');
+				}else{
+					if($(this).hasClass('active') != true && $(this).attr('id') == id){
+						$(this).addClass('active');
+					}
+				}
+			});		
+			$('.hwcCalc').animate({
+				opacity: 0,
+			}, 50, function() {
+				$('.hwcCalc').css('visibility', 'hidden');
+			});		
+			$('.'+id).animate({
+				opacity: 1,
+			}, 100, function(){
+				$('.'+id).css('visibility', 'visible');
+			});
+		});
+	});
+</script>
 </body>
 </html>

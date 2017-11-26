@@ -1,11 +1,11 @@
 <?php
 
-class geoCalculator{
+class calculator{
 	var $returnsAdj;
 	var $growthHundred;
 	function __construct($data){
 		foreach($data as $i){
-			$returns_adj[] = round(1 + ((str_replace('%', '', $i)) / 100), 3);
+			$returns_adj[] = 1 + ((str_replace('%', '', $i)) / 100);
 		}
 		$returns_growth_100 = $data;
 		$length_growth = sizeof($returns_growth_100) - 1;
@@ -21,7 +21,7 @@ class geoCalculator{
 			}
 		}
 		foreach($returns_growth_100 as $i => $val){
-			$returns_growth_100[$i] = round(($returns_growth_100[$i] * 100), 2);
+			$returns_growth_100[$i] = $returns_growth_100[$i] * 100;
 		}
 		
 		$this->returnsAdj = $returns_adj;
@@ -43,6 +43,65 @@ class geoCalculator{
 	function getJenAlpha($rfr, $beta, $fundCagr, $bmCagr){
 		$jAlpha = ($fundCagr - ($rfr + $beta * ($bmCagr - $rfr))); //rfr is client choice
 		return $jAlpha;
+	}
+	
+	function getJenAlphaMn($fundGeo, $rfr, $beta, $bmGeo){
+		$jenAlphaMn = ($fundGeo - ($rfr + $beta * ($bmGeo - $rfr)));
+		return $jenAlphaMn;
+	}
+	
+	function getStdDev(){
+		$data = $this->returnsAdj;
+		$mean = array_sum($data) / count($data);
+		foreach($data as $key => $num) $devs[$key] = pow($num - $mean, 2);
+		$stdDev = sqrt(array_sum($devs) / (count($devs) - 1));
+		return $stdDev;
+	}
+	
+	function getSharpe($cagr, $rfr, $stdDev){
+		//$standard_deviation = 15.43;
+		$sharpe = ($cagr - $rfr) / $stdDev; //monthly
+		return $sharpe;
+		//$sharp_ratio_ann = ((($geomean - .29) / 4.45)) * sqrt(12); //annualized
+	}
+	
+	function getSharpeAnn($geomean, $rfr, $stdDev){
+		$sharpeAnn = ((($geomean - $rfr) / $stdDev)) * sqrt(12); //annualized
+		return $sharpeAnn;
+	}
+	
+	function getDwnsideDev(){
+		$returns_average = array_sum($this->returnsAdj) / count($this->returnsAdj);
+		$p_t = $this->returnsAdj;
+		foreach($p_t as $i => $val){
+			if ($val < $returns_average){
+				$p_t[$i] = $val;
+			}else{
+				$p_t[$i] = "";
+			}
+		}
+		$p_t = array_filter($p_t);
+		/* TODO: Connect this with the other Std Dev method above, maybe add as parameter, run p_t formula through stdDev? */
+		function standard_deviation($data){
+			if(is_array($data)){
+				$mean = array_sum($data) / count($data);
+				foreach($data as $key => $num) $devs[$key] = pow($num - $mean, 2);
+				return sqrt(array_sum($devs) / (count($devs) - 1));
+			}
+		}
+		/* ---------------------------------------- */
+		$dwnsideDev = standard_deviation($p_t);
+		return $dwnsideDev;
+	}
+	
+	function getSortino($cagr, $rfr, $dwnsideDevAnn){
+		$sortino = ($cagr - $rfr) / $dwnsideDevAnn;
+		return $sortino;
+	}
+	
+	function getSortinoAnn($geomean, $rfr, $dwnsideDev){
+		$sortino_ann = (($geomean - $rfr) / $dwnsideDev) * sqrt(12);
+		return $sortino_ann;
 	}
 	
 }

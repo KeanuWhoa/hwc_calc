@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-11-24 19:58:48
+/* Smarty version 3.1.31, created on 2017-11-25 19:07:36
   from "C:\Program Files (x86)\Ampps\www\hcocalc\hwc_calc\templates\home.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5a18c04862cdc7_96486899',
+  'unifunc' => 'content_5a1a05c8176c48_49930901',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '09cab0fa0ce552825f466f81d19783cacc4c9503' => 
     array (
       0 => 'C:\\Program Files (x86)\\Ampps\\www\\hcocalc\\hwc_calc\\templates\\home.html',
-      1 => 1511571526,
+      1 => 1511654854,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a18c04862cdc7_96486899 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a1a05c8176c48_49930901 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\Program Files (x86)\\Ampps\\www\\hcocalc\\hwc_calc\\smarty\\libs\\plugins\\modifier.date_format.php';
 ?>
 <!doctype html>
@@ -30,13 +30,21 @@ if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\Program Files
 <title>HWC Calculator Home</title>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet"> 
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<?php echo '<script'; ?>
+ type="text/javascript" src="js/jquery_3.2.1.js"><?php echo '</script'; ?>
+>
 </head>
 
 <body>
-	
+<div class="calcMenu">
+	<a href="javascript:void(0);" id="historicReturns" class="active">Historic Returns</a>
+	<a href="javascript:void(0);" id="returnStats">Return Stats</a>
+	<a href="javascript:void(0);" id="quantStats">Quant Stats</a>
+</div>
+<div class="contentContainer">
 <?php $_smarty_tpl->_assignInScope('months', array('January','February','March','April','May','June','July','August','September','October','November','December'));
 ?>
-<div class="historicalReturns">
+<div class="historicReturns hwcCalc">
 	<h1>Historic Returns</h1>
 	<?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['fundYears']->value, 'years');
@@ -95,6 +103,64 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
 
 </div>
 	
+<div class="quantStats hwcCalc">
+	<h1>Quant Stats</h1>
+	
+	<p><span>CAGR:</span> <span><?php echo sprintf("%.2f",round($_smarty_tpl->tpl_vars['calc']->value['cagr'],2));?>
+%</span></p>
+	<p><span>Geometric Mean:</span> <span><?php echo sprintf("%.2f",round($_smarty_tpl->tpl_vars['calc']->value['geomean'],2));?>
+%</span></p>
+	<p><span>Sharpe Ratio:</span> <span><?php echo sprintf("%.2f",round($_smarty_tpl->tpl_vars['calc']->value['sharpe'],2));?>
+</span></p>
+	<p><span>Sharpe Ratio (Annualized):</span> <span><?php echo sprintf("%.2f",round($_smarty_tpl->tpl_vars['calc']->value['sharpeAnn'],2));?>
+</span></p>
+	<p><span>Sortino:</span> <span><?php echo sprintf("%.2f",round($_smarty_tpl->tpl_vars['calc']->value['sortino'],2));?>
+</span></p>
+	<p><span>Sortino (Annualized):</span> <span><?php echo sprintf("%.2f",round($_smarty_tpl->tpl_vars['calc']->value['sortinoAnn'],2));?>
+</span></p>
+	<p><span>Jensen's Alpha:</span> <span><?php echo sprintf("%.2f",round($_smarty_tpl->tpl_vars['calc']->value['jenAlpha'],2));?>
+</span></p>
+	<p><span>Jensen's Alpha (Monthly):</span> <span><?php echo sprintf("%.2f",round($_smarty_tpl->tpl_vars['calc']->value['jenAlphaMn'],2));?>
+</span></p>
+	<p><span>Standard Deviation:</span> <span><?php echo sprintf("%.2f",round($_smarty_tpl->tpl_vars['calc']->value['stdDev'],2));?>
+%</span></p>
+	<p><span>Standard Deviation (Annualized):</span> <span><?php echo sprintf("%.2f",round($_smarty_tpl->tpl_vars['calc']->value['stdDevAnn'],2));?>
+%</span></p>
+	<p><span>Downside Deviation:</span> <span><?php echo sprintf("%.2f",round($_smarty_tpl->tpl_vars['calc']->value['dwnsideDev'],2));?>
+%</span></p>
+	<p><span>Downside Deviation (Annualized):</span> <span><?php echo sprintf("%.2f",round($_smarty_tpl->tpl_vars['calc']->value['dwnsideDevAnn'],2));?>
+%</span></p>
+</div>
+
+</div>
+<?php echo '<script'; ?>
+>
+	$('document').ready(function(){
+		$('.calcMenu a').click(function(){
+			var id = $(this).attr('id');
+			$('.calcMenu a').each(function(){
+				if($(this).hasClass('active') == true && $(this).attr('id') != id){
+					$(this).removeClass('active');
+				}else{
+					if($(this).hasClass('active') != true && $(this).attr('id') == id){
+						$(this).addClass('active');
+					}
+				}
+			});		
+			$('.hwcCalc').animate({
+				opacity: 0,
+			}, 50, function() {
+				$('.hwcCalc').css('visibility', 'hidden');
+			});		
+			$('.'+id).animate({
+				opacity: 1,
+			}, 100, function(){
+				$('.'+id).css('visibility', 'visible');
+			});
+		});
+	});
+<?php echo '</script'; ?>
+>
 </body>
 </html>
 <?php }
