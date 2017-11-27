@@ -54,7 +54,7 @@ class calculator{
 		$data = $this->returnsAdj;
 		$mean = array_sum($data) / count($data);
 		foreach($data as $key => $num) $devs[$key] = pow($num - $mean, 2);
-		$stdDev = sqrt(array_sum($devs) / (count($devs) - 1));
+		$stdDev = (sqrt(array_sum($devs) / (count($devs) - 1))) * 100;
 		return $stdDev;
 	}
 	
@@ -90,7 +90,7 @@ class calculator{
 			}
 		}
 		/* ---------------------------------------- */
-		$dwnsideDev = standard_deviation($p_t);
+		$dwnsideDev = (standard_deviation($p_t)) * 100;
 		return $dwnsideDev;
 	}
 	
@@ -102,6 +102,14 @@ class calculator{
 	function getSortinoAnn($geomean, $rfr, $dwnsideDev){
 		$sortino_ann = (($geomean - $rfr) / $dwnsideDev) * sqrt(12);
 		return $sortino_ann;
+	}
+	
+	function getCumulativeReturn(){
+		$growth100 = $this->growthHundred;
+		$length = sizeof($growth100);
+		$cumulativeReturn = (($growth100[$length - 1] / 100) - 1) * 100;
+		
+		return $cumulativeReturn;
 	}
 	
 }

@@ -33,14 +33,15 @@ $fundRfrMn = $rfrMn * 100;
 	$fundCalc = new calculator($fundReturns);
 	$fundGeoMean = $fundCalc->getGeoMean($length);
 	$fundCAGR = $fundCalc->getCAGR($length);
-	$fundStdDev = ($fundCalc->getStdDev()) * 100;
+	$fundStdDev = $fundCalc->getStdDev();
 	$fundStdDevAnn = $fundStdDev * sqrt(12);
 	$fundSharpe = $fundCalc->getSharpe($fundCAGR, $fundRfr, $fundStdDevAnn);
 	$fundSharpeAnn = $fundCalc->getSharpeAnn($fundGeoMean, $fundRfrMn, $fundStdDev);
-	$fundDwnsideDev = ($fundCalc->getDwnsideDev()) * 100;
+	$fundDwnsideDev = $fundCalc->getDwnsideDev();
 	$fundDwnsideDevAnn = $fundDwnsideDev * sqrt(12);
 	$fundSortino = $fundCalc->getSortino($fundCAGR, $fundRfr, $fundDwnsideDevAnn);
 	$fundSortinoAnn = $fundCalc->getSortinoAnn($fundGeoMean, $fundRfrMn, $fundDwnsideDev);
+	$fundCumulativeReturn = $fundCalc->getCumulativeReturn();
 
 	/* BM Returns Calc */
 	$bmCalc = new calculator($fundBenchmark);
@@ -54,10 +55,10 @@ $fundRfrMn = $rfrMn * 100;
 	/* Setup for SMARTY */
 	$values = array(
 		$fundGeoMean, $fundCAGR, $fundJenAlpha, $fundJenAlphaMn, $fundStdDev, $fundStdDevAnn, $fundSharpe, $fundSharpeAnn, $fundDwnsideDev, $fundDwnsideDevAnn,
-		$fundSortino, $fundSortinoAnn
+		$fundSortino, $fundSortinoAnn, $fundCumulativeReturn
 	);
 	$keys = array(
-		'geomean', 'cagr', 'jenAlpha', 'jenAlphaMn', 'stdDev', 'stdDevAnn', 'sharpe', 'sharpeAnn', 'dwnsideDev', 'dwnsideDevAnn', 'sortino', 'sortinoAnn'
+		'geomean', 'cagr', 'jenAlpha', 'jenAlphaMn', 'stdDev', 'stdDevAnn', 'sharpe', 'sharpeAnn', 'dwnsideDev', 'dwnsideDevAnn', 'sortino', 'sortinoAnn', 'cumulativeReturn'
 	);
 	$calc = array_combine($keys, $values);
 /* ----------------- */
