@@ -50,6 +50,10 @@
 	<h1>Quant Stats</h1>
 	{* TODO: further refine for one line of code here ... array with quant stats!!!! *}
 	<p><span>Cumulative Return:</span> <span>{$calc.cumulativeReturn|round:2|string_format:"%.2f"}%</span></p>
+	<p><span>1 Year Return:</span> <span>{$calc.cumulativeReturnOne|round:2|string_format:"%.2f"}%</span></p>
+	<p><span>1 Year Return (Moving):</span> <span>{$calc.cumulativeReturnOneMoving|round:2|string_format:"%.2f"}%</span></p>
+	<p><span>2 Year Return:</span> <span>{$calc.cumulativeReturnTwo|round:2|string_format:"%.2f"}%</span></p>
+	<p><span>2 Year Return (Moving):</span> <span>{$calc.cumulativeReturnTwoMoving|round:2|string_format:"%.2f"}%</span></p>
 	<p><span>CAGR:</span> <span>{$calc.cagr|round:2|string_format:"%.2f"}%</span></p>
 	<p><span>Geometric Mean:</span> <span>{$calc.geomean|round:2|string_format:"%.2f"}%</span></p>
 	<p><span>Sharpe Ratio:</span> <span>{$calc.sharpe|round:2|string_format:"%.2f"}</span></p>

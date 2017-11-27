@@ -104,11 +104,26 @@ class calculator{
 		return $sortino_ann;
 	}
 	
-	function getCumulativeReturn(){
+	function getCumulativeReturn($period, $moving){
 		$growth100 = $this->growthHundred;
-		$length = sizeof($growth100);
-		$cumulativeReturn = (($growth100[$length - 1] / 100) - 1) * 100;
-		
+		if($moving == true){
+			if($period == 'total'){
+			$length = (sizeof($growth100)) - 1;
+			$cumulativeReturn = (($growth100[$length] / 100) - 1) * 100;
+			}else{
+				$length = $period - 1;
+				$cumulativeReturn = (($growth100[$period] / 100) - 1) * 100;
+			}
+		}else{
+			if($period > 1){
+				$cumulativeReturn = '1.67';
+			}else{
+				$date = date('m-d-Y', time());
+				$month = date('m');
+				$length = $month - 1;
+				$cumulativeReturn = (($growth100[$length] / 100) - 1) * 100;
+			}
+		}
 		return $cumulativeReturn;
 	}
 	

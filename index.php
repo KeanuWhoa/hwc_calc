@@ -41,7 +41,11 @@ $fundRfrMn = $rfrMn * 100;
 	$fundDwnsideDevAnn = $fundDwnsideDev * sqrt(12);
 	$fundSortino = $fundCalc->getSortino($fundCAGR, $fundRfr, $fundDwnsideDevAnn);
 	$fundSortinoAnn = $fundCalc->getSortinoAnn($fundGeoMean, $fundRfrMn, $fundDwnsideDev);
-	$fundCumulativeReturn = $fundCalc->getCumulativeReturn();
+	$fundCumulativeReturn = $fundCalc->getCumulativeReturn('total', true);
+	$fundCumulativeReturnOneMoving = $fundCalc->getCumulativeReturn('12', true); //moving period is in months, static is years
+	$fundCumulativeReturnOne = $fundCalc->getCumulativeReturn('1', false);
+	$fundCumulativeReturnTwoMoving = $fundCalc->getCumulativeReturn('24', true);
+	$fundCumulativeReturnTwo = $fundCalc->getCumulativeReturn('2', false);
 
 	/* BM Returns Calc */
 	$bmCalc = new calculator($fundBenchmark);
@@ -55,10 +59,12 @@ $fundRfrMn = $rfrMn * 100;
 	/* Setup for SMARTY */
 	$values = array(
 		$fundGeoMean, $fundCAGR, $fundJenAlpha, $fundJenAlphaMn, $fundStdDev, $fundStdDevAnn, $fundSharpe, $fundSharpeAnn, $fundDwnsideDev, $fundDwnsideDevAnn,
-		$fundSortino, $fundSortinoAnn, $fundCumulativeReturn
+		$fundSortino, $fundSortinoAnn, $fundCumulativeReturn, $fundCumulativeReturnOneMoving, $fundCumulativeReturnOne,
+		$fundCumulativeReturnTwoMoving, $fundCumulativeReturnTwo
 	);
 	$keys = array(
-		'geomean', 'cagr', 'jenAlpha', 'jenAlphaMn', 'stdDev', 'stdDevAnn', 'sharpe', 'sharpeAnn', 'dwnsideDev', 'dwnsideDevAnn', 'sortino', 'sortinoAnn', 'cumulativeReturn'
+		'geomean', 'cagr', 'jenAlpha', 'jenAlphaMn', 'stdDev', 'stdDevAnn', 'sharpe', 'sharpeAnn', 'dwnsideDev', 'dwnsideDevAnn', 'sortino', 'sortinoAnn', 'cumulativeReturn', 'cumulativeReturnOneMoving', 'cumulativeReturnOne', 
+		'cumulativeReturnTwoMoving', 'cumulativeReturnTwo'
 	);
 	$calc = array_combine($keys, $values);
 /* ----------------- */
@@ -70,7 +76,11 @@ foreach($fundPeriod as $i => $val){
 	$historicalReturns[$i]["returns"] = $fundReturns[$i];
 }
 /* ----------------- */
-
+foreach($fundPeriod as $val){
+	echo date("n", $val);
+	echo "<br/>";
+}
+die();
 /* Getting the set of years from the data */
 $fundYears = array();
 foreach($fundPeriod as $val){

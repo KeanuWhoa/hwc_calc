@@ -23,8 +23,10 @@ class dataCleanup{
 	
 	function getYears(){
 		foreach($this->excelOutput[0] as $yearNoFormat){
+			//for this data, need to remove first value for some reason
 			$years[] = strtotime($yearNoFormat);
 		}
+		$weird = array_shift($years);
 		return $years;
 	}
 	
