@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-11-26 18:50:21
+/* Smarty version 3.1.31, created on 2017-11-26 22:45:09
   from "C:\Program Files (x86)\Ampps\www\hcocalc\hwc_calc\templates\home.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5a1b533d6eac82_46398735',
+  'unifunc' => 'content_5a1b8a459504d5_43074088',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '09cab0fa0ce552825f466f81d19783cacc4c9503' => 
     array (
       0 => 'C:\\Program Files (x86)\\Ampps\\www\\hcocalc\\hwc_calc\\templates\\home.html',
-      1 => 1511740218,
+      1 => 1511754306,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a1b533d6eac82_46398735 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a1b8a459504d5_43074088 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\Program Files (x86)\\Ampps\\www\\hcocalc\\hwc_calc\\smarty\\libs\\plugins\\modifier.date_format.php';
 ?>
 <!doctype html>
@@ -101,6 +101,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
 ?>
 
+<div style="clear:both;"></div>
 </div>
 	
 <div class="quantStats hwcCalc">
@@ -135,6 +136,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
 </div>
 
 </div>
+
 <?php echo '<script'; ?>
 >
 	$('document').ready(function(){
