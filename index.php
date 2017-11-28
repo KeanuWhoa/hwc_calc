@@ -15,6 +15,12 @@ $excelData = new dataCleanup('returns.csv');
 $fundPeriod = $excelData->getYears();
 $fundReturns = $excelData->getReturns();
 $fundBenchmark = $excelData->getBenchmark();
+
+$jsonDatesReturns = $excelData->getJSON(); // json from HWC
+$fundReturnsTest = json_decode($jsonDatesReturns); // now we undo that
+echo "<pre>";
+print_r($fundReturnsTest);echo "</pre>";die();
+
 /* ----------------- */
 
 /* Girth measuring */
@@ -76,11 +82,7 @@ foreach($fundPeriod as $i => $val){
 	$historicalReturns[$i]["returns"] = $fundReturns[$i];
 }
 /* ----------------- */
-foreach($fundPeriod as $val){
-	echo date("n", $val);
-	echo "<br/>";
-}
-die();
+
 /* Getting the set of years from the data */
 $fundYears = array();
 foreach($fundPeriod as $val){

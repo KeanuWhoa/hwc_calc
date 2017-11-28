@@ -8,7 +8,7 @@ class dataCleanup{
 	function __construct($data){
 		$file = fopen($data,"r");
 		if ( !$file ) {
-			echo "you done messed up";
+			echo "you done messed up a a ron";
 		}else {
 			while( ($row = fgetcsv($file) ) !== FALSE) {
 				$year[] = $row[0];
@@ -23,10 +23,8 @@ class dataCleanup{
 	
 	function getYears(){
 		foreach($this->excelOutput[0] as $yearNoFormat){
-			//for this data, need to remove first value for some reason
 			$years[] = strtotime($yearNoFormat);
 		}
-		$weird = array_shift($years);
 		return $years;
 	}
 	
@@ -38,7 +36,22 @@ class dataCleanup{
 	function getBenchmark(){
 		$benchmark = $this->excelOutput[2];
 		return $benchmark;
-	}	
+	}
+	
+	function getJSON(){
+		foreach($this->excelOutput[0] as $yearNoFormat){
+			$years[] = date("Y-m", strtotime($yearNoFormat));
+		}
+		$return = $this->excelOutput[1];
+		
+		$jsonReady = array();
+		foreach($years as $i => $val){
+			$jsonReady[$i][0] = $val;
+			$jsonReady[$i][1] = $return[$i];
+		}
+		return json_encode($jsonReady);
+	}
+	
 }
 
 ?>
