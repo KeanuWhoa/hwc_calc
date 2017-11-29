@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-11-26 23:40:30
+/* Smarty version 3.1.31, created on 2017-11-28 22:09:54
   from "C:\Program Files (x86)\Ampps\www\hcocalc\hwc_calc\templates\home.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5a1b973e0965d2_35566439',
+  'unifunc' => 'content_5a1e2502376480_19816819',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '09cab0fa0ce552825f466f81d19783cacc4c9503' => 
     array (
       0 => 'C:\\Program Files (x86)\\Ampps\\www\\hcocalc\\hwc_calc\\templates\\home.html',
-      1 => 1511757628,
+      1 => 1511924993,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a1b973e0965d2_35566439 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a1e2502376480_19816819 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\Program Files (x86)\\Ampps\\www\\hcocalc\\hwc_calc\\smarty\\libs\\plugins\\modifier.date_format.php';
 ?>
 <!doctype html>
@@ -39,7 +39,7 @@ if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\Program Files
 <div class="calcMenu">
 	<a href="javascript:void(0);" id="historicReturns" class="active">Historic Returns</a>
 	<a href="javascript:void(0);" id="returnStats">Return Stats</a>
-	<a href="javascript:void(0);" id="quantStats">Quant Stats</a>
+	<a href="javascript:void(0);" id="quantStats">Stats</a>
 </div>
 <div class="contentContainer">
 <?php $_smarty_tpl->_assignInScope('months', array('January','February','March','April','May','June','July','August','September','October','November','December'));
@@ -109,13 +109,15 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
 	
 	<p><span>Cumulative Return:</span> <span><?php echo sprintf("%.2f",round($_smarty_tpl->tpl_vars['calc']->value['cumulativeReturn'],2));?>
 %</span></p>
-	<p><span>1 Year Return:</span> <span><?php echo sprintf("%.2f",round($_smarty_tpl->tpl_vars['calc']->value['cumulativeReturnOne'],2));?>
+	<p><span>YTD:</span> <span><?php echo sprintf("%.2f",round($_smarty_tpl->tpl_vars['calc']->value['YTD'],2));?>
 %</span></p>
-	<p><span>1 Year Return (Moving):</span> <span><?php echo sprintf("%.2f",round($_smarty_tpl->tpl_vars['calc']->value['cumulativeReturnOneMoving'],2));?>
+	<p><span>1 Year Return:</span> <span><?php echo sprintf("%.2f",round($_smarty_tpl->tpl_vars['calc']->value['cumulativeReturnOneMoving'],2));?>
 %</span></p>
-	<p><span>2 Year Return:</span> <span><?php echo sprintf("%.2f",round($_smarty_tpl->tpl_vars['calc']->value['cumulativeReturnTwo'],2));?>
+	<p><span>2 Year Return:</span> <span><?php echo sprintf("%.2f",round($_smarty_tpl->tpl_vars['calc']->value['cumulativeReturnTwoMoving'],2));?>
 %</span></p>
-	<p><span>2 Year Return (Moving):</span> <span><?php echo sprintf("%.2f",round($_smarty_tpl->tpl_vars['calc']->value['cumulativeReturnTwoMoving'],2));?>
+	<p><span>3 Year Return:</span> <span><?php echo sprintf("%.2f",round($_smarty_tpl->tpl_vars['calc']->value['cumulativeReturnThreeMoving'],2));?>
+%</span></p>
+	<p><span>5 Year Return:</span> <span><?php echo sprintf("%.2f",round($_smarty_tpl->tpl_vars['calc']->value['cumulativeReturnFiveMoving'],2));?>
 %</span></p>
 	<p><span>CAGR:</span> <span><?php echo sprintf("%.2f",round($_smarty_tpl->tpl_vars['calc']->value['cagr'],2));?>
 %</span></p>
@@ -141,6 +143,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
 %</span></p>
 	<p><span>Downside Deviation (Annualized):</span> <span><?php echo sprintf("%.2f",round($_smarty_tpl->tpl_vars['calc']->value['dwnsideDevAnn'],2));?>
 %</span></p>
+	
+	<p><span>Beta:</span> <span><?php echo round($_smarty_tpl->tpl_vars['calc']->value['beta'],2);?>
+</span></p>
+	<p><span>Traynor Ratio:</span> <span><?php echo sprintf("%.2f",round($_smarty_tpl->tpl_vars['calc']->value['traynorRatio'],2));?>
+</span></p>
+	<h5>* all numbers are rounded</h5>
 </div>
 
 </div>

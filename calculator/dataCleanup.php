@@ -38,16 +38,15 @@ class dataCleanup{
 		return $benchmark;
 	}
 	
-	function getJSON(){
+	function getJSON($data){
 		foreach($this->excelOutput[0] as $yearNoFormat){
 			$years[] = date("Y-m", strtotime($yearNoFormat));
 		}
-		$return = $this->excelOutput[1];
 		
 		$jsonReady = array();
 		foreach($years as $i => $val){
 			$jsonReady[$i][0] = $val;
-			$jsonReady[$i][1] = $return[$i];
+			$jsonReady[$i][1] = $data[$i];
 		}
 		return json_encode($jsonReady);
 	}

@@ -16,15 +16,15 @@ $fundPeriod = $excelData->getYears();
 $fundReturns = $excelData->getReturns();
 $fundBenchmark = $excelData->getBenchmark();
 
-$jsonDatesReturns = $excelData->getJSON(); // json from HWC
-$fundReturnsTest = json_decode($jsonDatesReturns); // now we undo that
-echo "<pre>";
-print_r($fundReturnsTest);echo "</pre>";die();
+$jsonDatesReturns = $excelData->getJSON($fundReturns); // json from HWC
+$jsonDatesBMs = $excelData->getJSON($fundBenchmark);
+$fundReturnsTest = json_decode($jsonDatesReturns); // now we undo that -- isn't json fun!
+$fundBMsTest = json_decode($jsonDatesBMs);
 
 /* ----------------- */
 
 /* Girth measuring */
-$length = sizeof($fundReturns);
+$length = sizeof($fundReturnsTest);
 $length_bm = sizeof($fundBenchmark);
 /* ----------------- */
 
@@ -36,7 +36,7 @@ $fundRfr = $rfr * 100;
 $fundRfrMn = $rfrMn * 100;
 /* ---------------------- */
 	/* Fund Returns Calc */
-	$fundCalc = new calculator($fundReturns);
+	$fundCalc = new calculator($fundReturnsTest);
 	$fundGeoMean = $fundCalc->getGeoMean($length);
 	$fundCAGR = $fundCalc->getCAGR($length);
 	$fundStdDev = $fundCalc->getStdDev();
@@ -49,28 +49,33 @@ $fundRfrMn = $rfrMn * 100;
 	$fundSortinoAnn = $fundCalc->getSortinoAnn($fundGeoMean, $fundRfrMn, $fundDwnsideDev);
 	$fundCumulativeReturn = $fundCalc->getCumulativeReturn('total', true);
 	$fundCumulativeReturnOneMoving = $fundCalc->getCumulativeReturn('12', true); //moving period is in months, static is years
-	$fundCumulativeReturnOne = $fundCalc->getCumulativeReturn('1', false);
+	$YTD = $fundCalc->getCumulativeReturn('1', false);
 	$fundCumulativeReturnTwoMoving = $fundCalc->getCumulativeReturn('24', true);
-	$fundCumulativeReturnTwo = $fundCalc->getCumulativeReturn('2', false);
+	$fundCumulativeReturnThreeMoving = $fundCalc->getCumulativeReturn('36', true);
+	$fundCumulativeReturnFiveMoving = $fundCalc->getCumulativeReturn('60', true);
 
 	/* BM Returns Calc */
-	$bmCalc = new calculator($fundBenchmark);
+	$bmCalc = new calculator($fundBMsTest);
 	$bmCAGR = $bmCalc->getCAGR($length_bm);
 	$bmGeoMean = $bmCalc->getGeoMean($length_bm);
 
-	/* Fund + BM Calc */
-	$fundJenAlpha = $fundCalc->getJenAlpha($fundRfr, '0', $fundCAGR, $bmCAGR);
-	$fundJenAlphaMn = $fundCalc->getJenAlphaMn($fundGeoMean, $fundRfrMn, '0', $bmGeoMean);
+	/* Fund + BM Calc, or where Beta required */
+	$fundBeta = $fundCalc->getBeta($fundBMsTest);
+	$fundJenAlpha = $fundCalc->getJenAlpha($fundRfr, $fundBeta, $fundCAGR, $bmCAGR);
+	$fundJenAlphaMn = $fundCalc->getJenAlphaMn($fundGeoMean, $fundRfrMn, $fundBeta, $bmGeoMean);
+	$fundTraynorRatio = $fundCalc->getTraynorRatio($fundCAGR, $fundRfr, $fundBeta);
 
 	/* Setup for SMARTY */
 	$values = array(
 		$fundGeoMean, $fundCAGR, $fundJenAlpha, $fundJenAlphaMn, $fundStdDev, $fundStdDevAnn, $fundSharpe, $fundSharpeAnn, $fundDwnsideDev, $fundDwnsideDevAnn,
-		$fundSortino, $fundSortinoAnn, $fundCumulativeReturn, $fundCumulativeReturnOneMoving, $fundCumulativeReturnOne,
-		$fundCumulativeReturnTwoMoving, $fundCumulativeReturnTwo
+		$fundSortino, $fundSortinoAnn, $fundCumulativeReturn, $fundCumulativeReturnOneMoving, $YTD,
+		$fundCumulativeReturnTwoMoving, $fundCumulativeReturnTwo, $fundBeta, $fundCumulativeReturnThreeMoving,
+		$fundCumulativeReturnFiveMoving, $fundAlpha, $fundTraynorRatio
 	);
 	$keys = array(
-		'geomean', 'cagr', 'jenAlpha', 'jenAlphaMn', 'stdDev', 'stdDevAnn', 'sharpe', 'sharpeAnn', 'dwnsideDev', 'dwnsideDevAnn', 'sortino', 'sortinoAnn', 'cumulativeReturn', 'cumulativeReturnOneMoving', 'cumulativeReturnOne', 
-		'cumulativeReturnTwoMoving', 'cumulativeReturnTwo'
+		'geomean', 'cagr', 'jenAlpha', 'jenAlphaMn', 'stdDev', 'stdDevAnn', 'sharpe', 'sharpeAnn', 'dwnsideDev', 'dwnsideDevAnn', 'sortino', 'sortinoAnn', 'cumulativeReturn', 'cumulativeReturnOneMoving', 'YTD', 
+		'cumulativeReturnTwoMoving', 'cumulativeReturnTwo', 'beta', 'cumulativeReturnThreeMoving', 'cumulativeReturnFiveMoving',
+		'alpha', 'traynorRatio'
 	);
 	$calc = array_combine($keys, $values);
 /* ----------------- */

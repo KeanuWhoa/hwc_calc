@@ -1,16 +1,17 @@
 <?php
 
 class calculator{
+	var $returns;
 	var $returnsAdj;
 	var $growthHundred;
 	function __construct($data){
 		foreach($data as $i){
-			$returns_adj[] = 1 + ((str_replace('%', '', $i)) / 100);
+			$returns_adj[] = 1 + ((str_replace('%', '', $i[1])) / 100);
 		}
 		$returns_growth_100 = $data;
 		$length_growth = sizeof($returns_growth_100) - 1;
 		foreach ($returns_growth_100 as $i => $val) {
-			$returns_growth_100[$i] = ($returns_growth_100[$i] / 100);
+			$returns_growth_100[$i] = ($returns_growth_100[$i][1] / 100);
 		}   
 		foreach ($returns_growth_100 as $i => $val) {
 			if ($i == 0){
@@ -24,6 +25,11 @@ class calculator{
 			$returns_growth_100[$i] = $returns_growth_100[$i] * 100;
 		}
 		
+		foreach($data as $i){
+			$returns[] = $i[1];
+		}
+		
+		$this->returns = $returns;
 		$this->returnsAdj = $returns_adj;
 		$this->growthHundred = $returns_growth_100;
 	}
@@ -106,25 +112,73 @@ class calculator{
 	
 	function getCumulativeReturn($period, $moving){
 		$growth100 = $this->growthHundred;
+		$length = (sizeof($growth100)) - 1;
 		if($moving == true){
 			if($period == 'total'){
-			$length = (sizeof($growth100)) - 1;
-			$cumulativeReturn = (($growth100[$length] / 100) - 1) * 100;
+				$cumulativeReturn = (($growth100[$length] / 100) - 1) * 100;
+			}else if($period > $length){
+				$cumulativeReturn = "-";
 			}else{
-				$length = $period - 1;
-				$cumulativeReturn = (($growth100[$period] / 100) - 1) * 100;
+				$start = $length - $period;
+				$cumulativeReturn = (($growth100[$length] / $growth100[$start]) - 1) * 100;
 			}
 		}else{
-			if($period > 1){
-				$cumulativeReturn = '1.67';
-			}else{
-				$date = date('m-d-Y', time());
-				$month = date('m');
-				$length = $month - 1;
-				$cumulativeReturn = (($growth100[$length] / 100) - 1) * 100;
-			}
+			$year = $length - 10;
+			$cumulativeReturn = (($growth100[$length] / $growth100[$year]) - 1) * 100;
 		}
+
 		return $cumulativeReturn;
+	}
+	
+	// TODO: Do we separate Variance and CoVariance into their own methods?
+	function getBeta($bm){
+		/* COVARIANCE SETUP */
+		$length = sizeof($this->returns);
+		$lengthBM = sizeof($bm);
+		if($length != $lengthBM){
+			return "you messed up!";
+		}
+			/* RETURNS SETUP */
+			$fundAvg = array_sum($this->returns) / $length;
+			foreach($this->returns as $i => $value){
+				$returns[$i] = ($value - $fundAvg);
+			}	
+			/* ------------ */
+			/* Benchmark SETUP */
+			foreach($bm as $value){
+				$beGoneJSON[] = $value[1];
+			}
+			$bmAvg = array_sum($beGoneJSON) / $length;
+			foreach($beGoneJSON as $i => $value){
+				$benchM[$i] = ($value - $bmAvg); // will be used for variance
+			}
+			/* ------------ */
+			
+			/* Combine */
+			foreach($returns as $i => $value){
+				$combine[] = $value * $benchM[$i];
+			}
+			$combineSum = array_sum($combine);
+			$covariance = $combineSum / ($length - 1);
+			/* ------- */
+		/* --------------- */
+		/* VARIANCE SETUP */
+		foreach($benchM as $i => $value){
+			$squared[] = pow($value, 2);
+		}
+		$squaredSum = array_sum($squared);
+		$variance = $squaredSum / ($length - 1);
+		/* -------------- */
+		
+	/* BETA */
+		$beta = $covariance / $variance;
+	/* ---- */
+		return $beta;
+	}
+	
+	function getTraynorRatio($cagr, $rfr, $beta){
+		$traynorRatio = (($cagr - $rfr) / 100) / $beta;
+		return $traynorRatio;
 	}
 	
 }

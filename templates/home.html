@@ -12,7 +12,7 @@
 <div class="calcMenu">
 	<a href="javascript:void(0);" id="historicReturns" class="active">Historic Returns</a>
 	<a href="javascript:void(0);" id="returnStats">Return Stats</a>
-	<a href="javascript:void(0);" id="quantStats">Quant Stats</a>
+	<a href="javascript:void(0);" id="quantStats">Stats</a>
 </div>
 <div class="contentContainer">
 {$months = ['January','February','March','April','May','June','July','August','September','October','November','December']}
@@ -50,10 +50,11 @@
 	<h1>Quant Stats</h1>
 	{* TODO: further refine for one line of code here ... array with quant stats!!!! *}
 	<p><span>Cumulative Return:</span> <span>{$calc.cumulativeReturn|round:2|string_format:"%.2f"}%</span></p>
-	<p><span>1 Year Return:</span> <span>{$calc.cumulativeReturnOne|round:2|string_format:"%.2f"}%</span></p>
-	<p><span>1 Year Return (Moving):</span> <span>{$calc.cumulativeReturnOneMoving|round:2|string_format:"%.2f"}%</span></p>
-	<p><span>2 Year Return:</span> <span>{$calc.cumulativeReturnTwo|round:2|string_format:"%.2f"}%</span></p>
-	<p><span>2 Year Return (Moving):</span> <span>{$calc.cumulativeReturnTwoMoving|round:2|string_format:"%.2f"}%</span></p>
+	<p><span>YTD:</span> <span>{$calc.YTD|round:2|string_format:"%.2f"}%</span></p>
+	<p><span>1 Year Return:</span> <span>{$calc.cumulativeReturnOneMoving|round:2|string_format:"%.2f"}%</span></p>
+	<p><span>2 Year Return:</span> <span>{$calc.cumulativeReturnTwoMoving|round:2|string_format:"%.2f"}%</span></p>
+	<p><span>3 Year Return:</span> <span>{$calc.cumulativeReturnThreeMoving|round:2|string_format:"%.2f"}%</span></p>
+	<p><span>5 Year Return:</span> <span>{$calc.cumulativeReturnFiveMoving|round:2|string_format:"%.2f"}%</span></p>{* ROUND CONVERTS TO INT *}
 	<p><span>CAGR:</span> <span>{$calc.cagr|round:2|string_format:"%.2f"}%</span></p>
 	<p><span>Geometric Mean:</span> <span>{$calc.geomean|round:2|string_format:"%.2f"}%</span></p>
 	<p><span>Sharpe Ratio:</span> <span>{$calc.sharpe|round:2|string_format:"%.2f"}</span></p>
@@ -66,6 +67,10 @@
 	<p><span>Standard Deviation (Annualized):</span> <span>{$calc.stdDevAnn|round:2|string_format:"%.2f"}%</span></p>
 	<p><span>Downside Deviation:</span> <span>{$calc.dwnsideDev|round:2|string_format:"%.2f"}%</span></p>
 	<p><span>Downside Deviation (Annualized):</span> <span>{$calc.dwnsideDevAnn|round:2|string_format:"%.2f"}%</span></p>
+	{*<p><span>Alpha:</span> <span>{$calc.alpha|round:2}</span></p>*}
+	<p><span>Beta:</span> <span>{$calc.beta|round:2}</span></p>
+	<p><span>Traynor Ratio:</span> <span>{$calc.traynorRatio|round:2|string_format:"%.2f"}</span></p>
+	<h5>* all numbers are rounded</h5>
 </div>
 
 </div>

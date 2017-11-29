@@ -68,7 +68,7 @@ a{color:inherit;}
 
 .quantStats p{width:50%;padding-top:5px;padding-bottom:5px;border:1px solid #000;transition:.05s all ease;}
 .quantStats p:nth-of-type(even){background-color:rgba(0,0,0,.05);border-top:none;border-bottom:none;}
-.quantStats p:last-child{border-bottom:1px solid #000;}
+.quantStats p:last-of-type{border-bottom:1px solid #000;}
 .quantStats p:hover{background-color:rgba(0, 191, 255, .05);}
 
 .quantStats span{display:inline-block;width:calc(50% - 10px);}
