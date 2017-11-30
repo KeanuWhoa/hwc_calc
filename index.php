@@ -63,19 +63,21 @@ $fundRfrMn = $rfrMn * 100;
 	$fundBeta = $fundCalc->getBeta($fundBMsTest);
 	$fundJenAlpha = $fundCalc->getJenAlpha($fundRfr, $fundBeta, $fundCAGR, $bmCAGR);
 	$fundJenAlphaMn = $fundCalc->getJenAlphaMn($fundGeoMean, $fundRfrMn, $fundBeta, $bmGeoMean);
-	$fundTraynorRatio = $fundCalc->getTraynorRatio($fundCAGR, $fundRfr, $fundBeta);
+	$fundTraynorRatio = bcdiv(($fundCalc->getTraynorRatio($fundCAGR, $fundRfr, $fundBeta)), 1, 2);
+	$fundR = 0;
+	$fundRSquared = 0;
 
 	/* Setup for SMARTY */
 	$values = array(
 		$fundGeoMean, $fundCAGR, $fundJenAlpha, $fundJenAlphaMn, $fundStdDev, $fundStdDevAnn, $fundSharpe, $fundSharpeAnn, $fundDwnsideDev, $fundDwnsideDevAnn,
 		$fundSortino, $fundSortinoAnn, $fundCumulativeReturn, $fundCumulativeReturnOneMoving, $YTD,
 		$fundCumulativeReturnTwoMoving, $fundCumulativeReturnTwo, $fundBeta, $fundCumulativeReturnThreeMoving,
-		$fundCumulativeReturnFiveMoving, $fundAlpha, $fundTraynorRatio
+		$fundCumulativeReturnFiveMoving, $fundAlpha, $fundTraynorRatio, $fundR, $fundRSquared
 	);
 	$keys = array(
 		'geomean', 'cagr', 'jenAlpha', 'jenAlphaMn', 'stdDev', 'stdDevAnn', 'sharpe', 'sharpeAnn', 'dwnsideDev', 'dwnsideDevAnn', 'sortino', 'sortinoAnn', 'cumulativeReturn', 'cumulativeReturnOneMoving', 'YTD', 
 		'cumulativeReturnTwoMoving', 'cumulativeReturnTwo', 'beta', 'cumulativeReturnThreeMoving', 'cumulativeReturnFiveMoving',
-		'alpha', 'traynorRatio'
+		'alpha', 'traynorRatio', 'r', 'rSquared'
 	);
 	$calc = array_combine($keys, $values);
 /* ----------------- */

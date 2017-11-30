@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-11-28 22:09:54
+/* Smarty version 3.1.31, created on 2017-11-28 22:27:53
   from "C:\Program Files (x86)\Ampps\www\hcocalc\hwc_calc\templates\home.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5a1e2502376480_19816819',
+  'unifunc' => 'content_5a1e29390e4087_51242930',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '09cab0fa0ce552825f466f81d19783cacc4c9503' => 
     array (
       0 => 'C:\\Program Files (x86)\\Ampps\\www\\hcocalc\\hwc_calc\\templates\\home.html',
-      1 => 1511924993,
+      1 => 1511926071,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a1e2502376480_19816819 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a1e29390e4087_51242930 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\Program Files (x86)\\Ampps\\www\\hcocalc\\hwc_calc\\smarty\\libs\\plugins\\modifier.date_format.php';
 ?>
 <!doctype html>
@@ -146,7 +146,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
 	
 	<p><span>Beta:</span> <span><?php echo round($_smarty_tpl->tpl_vars['calc']->value['beta'],2);?>
 </span></p>
-	<p><span>Traynor Ratio:</span> <span><?php echo sprintf("%.2f",round($_smarty_tpl->tpl_vars['calc']->value['traynorRatio'],2));?>
+	<p><span>Traynor Ratio:</span> <span><?php echo $_smarty_tpl->tpl_vars['calc']->value['traynorRatio'];?>
+</span></p>
+	<p><span>R:</span> <span><?php echo $_smarty_tpl->tpl_vars['calc']->value['r'];?>
+</span></p>
+	<p><span>R Squared:</span> <span><?php echo $_smarty_tpl->tpl_vars['calc']->value['rSquared'];?>
 </span></p>
 	<h5>* all numbers are rounded</h5>
 </div>
