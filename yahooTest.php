@@ -1,5 +1,7 @@
 <?php
+
 date_default_timezone_set("America/New_York");
+ini_set('serialize_precision', -1);
 /*ini_set('max_execution_time', 0);
 $url = 'https://www.alphavantage.co/query?function=';//?function=TIME_SERIES_DAILY_ADJUSTED&symbol=MSFT&outputsize=full&apikey=demo;
 $type = 'TIME_SERIES_DAILY_ADJUSTED';
@@ -52,6 +54,7 @@ $beGoneJSON = json_decode($file, true);
 /*echo "<pre>";
 print_r($beGoneJSON);
 echo "</pre>";*/
+
 $latestDate = $beGoneJSON['Meta Data']['3. Last Refreshed'];
 //$52Weeks = strtotime('$latestDate -260 days');
 $date = DateTime::createFromFormat('Y-m-d',$latestDate);
@@ -73,13 +76,10 @@ foreach($beGoneJSON['Time Series (Daily)'] as $i => $value){
 	}
 }
 
-echo $highValue."<br />";
-echo $lowValue."<br /><br />";
-
+$historicClose = array_slice($historicClose, 0, 720);
 $historicClose = array_reverse($historicClose);
-$lengthClose = sizeof($historicClose);
-$lengthPeriod = $lengthClose / 50;
-$closeFiftyTwo = array_chunk($historicClose, 50);
+/*$lengthPeriod = $lengthClose / 50;
+$closeFiftyTwo = array_chunk($historicClose, 50);*/
 /*echo "<pre>";
 print_r($closeFiftyTwo);
 echo "</pre>";die();*/
@@ -87,13 +87,45 @@ echo "</pre>";die();*/
 	$remove = $lengthPeriod;
 	unset($closeFiftyTwo[$remove]);
 }*/
-foreach($closeFiftyTwo as $i => $value){
+/*foreach($closeFiftyTwo as $i => $value){
 	$period = sizeof($value);
 	$averages[] = array_sum($value) / $period;
+}*/
+
+function movingAvg($data, $period){
+	$AVG_WINDOW = $period;
+	$sum = 0;
+	for ($i = 0; $i < $AVG_WINDOW; $i++){
+	  $sum = $sum + $data[$i];
+	}
+
+	$last_i = count ($data);
+	for ($i = $AVG_WINDOW; $i < $last_i; $i++){
+	  $averages[$i]=$sum / ($AVG_WINDOW);
+	  $sum = $sum - $data[$i-$AVG_WINDOW] + $data[$i];
+	} 
+	foreach($averages as $value){
+		$movingAvg[] = round($value, 2);
+	}
+	return $movingAvg;
 }
 
-echo "<pre>";
-print_r($averages);
-echo "</pre>";
+$twoHundredDay = movingAvg($historicClose, 200);
+$twoHundredLength = sizeof($twoHundredDay);
+$eightTeenDay = array_reverse(movingAvg($historicClose, 18));
+$eightTeenDay = array_reverse(array_slice($eightTeenDay, 0, $twoHundredLength));
+$fiftyDay = array_reverse(movingAvg($historicClose, 50));
+$fiftyDay = array_reverse(array_slice($fiftyDay, 0, $twoHundredLength));
+$historicClose2 = array_reverse(array_slice(array_reverse($historicClose), 0, $twoHundredLength));
+
+$testing = [255, 500, 450];
+
+echo json_encode(${$_POST['type']}, JSON_NUMERIC_CHECK);
+
+//echo "<pre>";
+//print_r($eightTeenDay);
+//echo "</pre>";
+
+//so now we want to graph the 4 items, Close/18/50/200
 
 ?>
