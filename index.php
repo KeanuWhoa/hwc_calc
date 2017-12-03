@@ -64,8 +64,8 @@ $fundRfrMn = $rfrMn * 100;
 	$fundJenAlpha = $fundCalc->getJenAlpha($fundRfr, $fundBeta, $fundCAGR, $bmCAGR);
 	$fundJenAlphaMn = $fundCalc->getJenAlphaMn($fundGeoMean, $fundRfrMn, $fundBeta, $bmGeoMean);
 	$fundTraynorRatio = bcdiv(($fundCalc->getTraynorRatio($fundCAGR, $fundRfr, $fundBeta)), 1, 2);
-	$fundR = 0;
-	$fundRSquared = 0;
+	$fundR = $fundCalc->getCorrelation($fundBMsTest);
+	$fundRSquared = pow($fundR, 2);
 
 	/* Setup for SMARTY */
 	$values = array(

@@ -181,6 +181,43 @@ class calculator{
 		return $traynorRatio;
 	}
 	
+	function getCorrelation($bm){
+		/* COVARIANCE SETUP */
+		$length = sizeof($this->returns);
+		$lengthBM = sizeof($bm);
+		if($length != $lengthBM){
+			return "you messed up!";
+		}
+			/* RETURNS SETUP */
+			$fundAvg = array_sum($this->returns) / $length;
+			foreach($this->returns as $i => $value){
+				$returns[$i] = ($value - $fundAvg);
+			}	
+			/* ------------ */
+			/* Benchmark SETUP */
+			foreach($bm as $value){
+				$beGoneJSON[] = $value[1];
+			}
+			$bmAvg = array_sum($beGoneJSON) / $length;
+			foreach($beGoneJSON as $i => $value){
+				$benchM[$i] = ($value - $bmAvg); // will be used for variance
+			}
+			/* ------------ */
+			
+			/* Combine */
+			foreach($returns as $i => $value){
+				$combine[] = $value * $benchM[$i];
+			}
+			$combineSum = array_sum($combine);
+			$covariance = $combineSum / ($length - 1);
+			/* ------- */
+		/* --------------- */
+		$returnSD = standard_deviation($this->returns);
+		$bmSD = standard_deviation($beGoneJSON);
+		$correlation = $covariance / ($returnSD * $bmSD);
+		return $correlation;
+	}
+	
 }
 
 ?>
