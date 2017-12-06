@@ -1,0 +1,1431 @@
+{
+    "Meta Data": {
+        "1. Information": "Daily Time Series with Splits and Dividend Events",
+        "2. Symbol": "SWP",
+        "3. Last Refreshed": "2017-12-01",
+        "4. Output Size": "Full size",
+        "5. Time Zone": "US/Eastern"
+    },
+    "Time Series (Daily)": {
+        "2017-12-01": {
+            "1. open": "122.8700",
+            "2. high": "122.8700",
+            "3. low": "120.5300",
+            "4. close": "122.0960",
+            "5. adjusted close": "122.0960",
+            "6. volume": "199504",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-11-30": {
+            "1. open": "121.1100",
+            "2. high": "122.8200",
+            "3. low": "121.1100",
+            "4. close": "122.4153",
+            "5. adjusted close": "122.4153",
+            "6. volume": "72599",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-11-29": {
+            "1. open": "122.4200",
+            "2. high": "122.4200",
+            "3. low": "121.0300",
+            "4. close": "121.1557",
+            "5. adjusted close": "121.1557",
+            "6. volume": "114272",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-11-28": {
+            "1. open": "121.0000",
+            "2. high": "122.4000",
+            "3. low": "121.0000",
+            "4. close": "122.2850",
+            "5. adjusted close": "122.2850",
+            "6. volume": "142935",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-11-27": {
+            "1. open": "120.8000",
+            "2. high": "121.3300",
+            "3. low": "120.8000",
+            "4. close": "121.3200",
+            "5. adjusted close": "121.3200",
+            "6. volume": "131253",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-11-24": {
+            "1. open": "120.5506",
+            "2. high": "120.5506",
+            "3. low": "120.5506",
+            "4. close": "120.5506",
+            "5. adjusted close": "120.5506",
+            "6. volume": "289",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-11-22": {
+            "1. open": "121.5000",
+            "2. high": "121.6100",
+            "3. low": "120.9000",
+            "4. close": "120.9000",
+            "5. adjusted close": "120.9000",
+            "6. volume": "17616",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-11-21": {
+            "1. open": "120.8253",
+            "2. high": "121.3000",
+            "3. low": "120.5000",
+            "4. close": "121.2652",
+            "5. adjusted close": "121.2652",
+            "6. volume": "86540",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-11-20": {
+            "1. open": "120.4600",
+            "2. high": "120.4600",
+            "3. low": "120.4600",
+            "4. close": "120.4600",
+            "5. adjusted close": "120.4600",
+            "6. volume": "9306",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-11-17": {
+            "1. open": "119.6000",
+            "2. high": "120.1800",
+            "3. low": "119.2500",
+            "4. close": "119.2500",
+            "5. adjusted close": "119.2500",
+            "6. volume": "2877",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-11-16": {
+            "1. open": "120.1200",
+            "2. high": "120.1200",
+            "3. low": "119.2500",
+            "4. close": "119.6000",
+            "5. adjusted close": "119.6000",
+            "6. volume": "20465",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-11-15": {
+            "1. open": "119.4200",
+            "2. high": "119.8000",
+            "3. low": "119.4200",
+            "4. close": "119.8000",
+            "5. adjusted close": "119.8000",
+            "6. volume": "61954",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-11-14": {
+            "1. open": "119.7000",
+            "2. high": "119.8930",
+            "3. low": "119.0100",
+            "4. close": "119.8930",
+            "5. adjusted close": "119.8930",
+            "6. volume": "3806",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-11-13": {
+            "1. open": "119.5700",
+            "2. high": "119.5700",
+            "3. low": "118.7700",
+            "4. close": "118.7700",
+            "5. adjusted close": "118.7700",
+            "6. volume": "630",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-11-10": {
+            "1. open": "121.9500",
+            "2. high": "121.9500",
+            "3. low": "119.0000",
+            "4. close": "119.0000",
+            "5. adjusted close": "119.0000",
+            "6. volume": "15568",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-11-09": {
+            "1. open": "123.0900",
+            "2. high": "123.0900",
+            "3. low": "117.3073",
+            "4. close": "117.3073",
+            "5. adjusted close": "117.3073",
+            "6. volume": "31661",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-11-08": {
+            "1. open": "120.9800",
+            "2. high": "120.9900",
+            "3. low": "119.7930",
+            "4. close": "120.9500",
+            "5. adjusted close": "120.9500",
+            "6. volume": "125600",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-11-07": {
+            "1. open": "123.4399",
+            "2. high": "123.6000",
+            "3. low": "119.2732",
+            "4. close": "119.2732",
+            "5. adjusted close": "119.2732",
+            "6. volume": "117773",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-11-06": {
+            "1. open": "119.9400",
+            "2. high": "119.9400",
+            "3. low": "119.9400",
+            "4. close": "119.9400",
+            "5. adjusted close": "119.9400",
+            "6. volume": "224",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-11-03": {
+            "1. open": "118.0000",
+            "2. high": "118.5000",
+            "3. low": "118.0000",
+            "4. close": "118.5000",
+            "5. adjusted close": "118.5000",
+            "6. volume": "5715",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-11-02": {
+            "1. open": "119.0000",
+            "2. high": "119.0000",
+            "3. low": "118.4900",
+            "4. close": "119.0000",
+            "5. adjusted close": "119.0000",
+            "6. volume": "843",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-11-01": {
+            "1. open": "118.2000",
+            "2. high": "118.2000",
+            "3. low": "117.9631",
+            "4. close": "117.9631",
+            "5. adjusted close": "117.9631",
+            "6. volume": "5665",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-10-31": {
+            "1. open": "118.6600",
+            "2. high": "118.6600",
+            "3. low": "117.4000",
+            "4. close": "118.2700",
+            "5. adjusted close": "118.2700",
+            "6. volume": "13925",
+            "7. dividend amount": "1.3400",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-10-30": {
+            "1. open": "118.0600",
+            "2. high": "120.4900",
+            "3. low": "117.7036",
+            "4. close": "120.0000",
+            "5. adjusted close": "118.6556",
+            "6. volume": "17994",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-10-27": {
+            "1. open": "120.3750",
+            "2. high": "121.0000",
+            "3. low": "117.8100",
+            "4. close": "117.8100",
+            "5. adjusted close": "116.4902",
+            "6. volume": "4836",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-10-26": {
+            "1. open": "120.2000",
+            "2. high": "120.2000",
+            "3. low": "120.2000",
+            "4. close": "120.2000",
+            "5. adjusted close": "118.8534",
+            "6. volume": "79",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-10-25": {
+            "1. open": "118.0000",
+            "2. high": "120.2000",
+            "3. low": "118.0000",
+            "4. close": "120.2000",
+            "5. adjusted close": "118.8534",
+            "6. volume": "7160",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-10-24": {
+            "1. open": "118.7000",
+            "2. high": "121.3610",
+            "3. low": "118.7000",
+            "4. close": "120.1100",
+            "5. adjusted close": "118.7644",
+            "6. volume": "67007",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-10-23": {
+            "1. open": "118.4008",
+            "2. high": "118.4008",
+            "3. low": "117.5400",
+            "4. close": "117.5400",
+            "5. adjusted close": "116.2232",
+            "6. volume": "5441",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-10-20": {
+            "1. open": "117.7619",
+            "2. high": "118.4500",
+            "3. low": "117.7619",
+            "4. close": "118.4500",
+            "5. adjusted close": "117.1230",
+            "6. volume": "16317",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-10-19": {
+            "1. open": "117.0100",
+            "2. high": "117.0100",
+            "3. low": "117.0100",
+            "4. close": "117.0100",
+            "5. adjusted close": "115.6991",
+            "6. volume": "4241",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-10-18": {
+            "1. open": "116.9100",
+            "2. high": "117.0000",
+            "3. low": "116.6400",
+            "4. close": "116.6400",
+            "5. adjusted close": "115.3333",
+            "6. volume": "2105",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-10-17": {
+            "1. open": "117.0300",
+            "2. high": "117.2640",
+            "3. low": "117.0300",
+            "4. close": "117.0600",
+            "5. adjusted close": "115.7486",
+            "6. volume": "1393",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-10-16": {
+            "1. open": "118.1800",
+            "2. high": "118.6900",
+            "3. low": "118.1000",
+            "4. close": "118.1000",
+            "5. adjusted close": "116.7769",
+            "6. volume": "35430",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-10-13": {
+            "1. open": "117.9500",
+            "2. high": "118.0000",
+            "3. low": "117.5000",
+            "4. close": "117.5000",
+            "5. adjusted close": "116.1836",
+            "6. volume": "13514",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-10-12": {
+            "1. open": "114.7000",
+            "2. high": "117.6504",
+            "3. low": "114.7000",
+            "4. close": "116.9600",
+            "5. adjusted close": "115.6497",
+            "6. volume": "2790",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-10-11": {
+            "1. open": "115.5500",
+            "2. high": "116.5268",
+            "3. low": "115.1000",
+            "4. close": "115.3100",
+            "5. adjusted close": "114.0182",
+            "6. volume": "8354",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-10-10": {
+            "1. open": "115.6400",
+            "2. high": "116.4900",
+            "3. low": "115.6100",
+            "4. close": "115.6100",
+            "5. adjusted close": "114.3148",
+            "6. volume": "2394",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-10-09": {
+            "1. open": "113.8900",
+            "2. high": "118.7620",
+            "3. low": "113.8900",
+            "4. close": "115.3500",
+            "5. adjusted close": "114.0577",
+            "6. volume": "16585",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-10-06": {
+            "1. open": "116.4300",
+            "2. high": "117.2000",
+            "3. low": "113.2900",
+            "4. close": "115.4300",
+            "5. adjusted close": "114.1368",
+            "6. volume": "41737",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-10-05": {
+            "1. open": "116.6100",
+            "2. high": "117.4900",
+            "3. low": "116.6100",
+            "4. close": "116.7500",
+            "5. adjusted close": "115.4420",
+            "6. volume": "91554",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-10-04": {
+            "1. open": "115.4200",
+            "2. high": "118.3700",
+            "3. low": "115.4200",
+            "4. close": "117.0000",
+            "5. adjusted close": "115.6892",
+            "6. volume": "60029",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-10-03": {
+            "1. open": "115.8500",
+            "2. high": "115.8500",
+            "3. low": "115.7600",
+            "4. close": "115.7600",
+            "5. adjusted close": "114.4631",
+            "6. volume": "22569",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-10-02": {
+            "1. open": "115.6100",
+            "2. high": "116.0000",
+            "3. low": "115.2900",
+            "4. close": "115.6700",
+            "5. adjusted close": "114.3741",
+            "6. volume": "128061",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-09-29": {
+            "1. open": "113.9000",
+            "2. high": "115.0001",
+            "3. low": "113.8300",
+            "4. close": "114.6500",
+            "5. adjusted close": "113.3656",
+            "6. volume": "32440",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-09-28": {
+            "1. open": "112.3800",
+            "2. high": "113.3000",
+            "3. low": "112.3800",
+            "4. close": "112.7700",
+            "5. adjusted close": "111.5066",
+            "6. volume": "8009",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-09-27": {
+            "1. open": "112.3000",
+            "2. high": "113.6238",
+            "3. low": "112.2700",
+            "4. close": "112.5100",
+            "5. adjusted close": "111.2495",
+            "6. volume": "31083",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-09-26": {
+            "1. open": "114.9900",
+            "2. high": "114.9900",
+            "3. low": "111.7000",
+            "4. close": "111.7000",
+            "5. adjusted close": "110.4486",
+            "6. volume": "46796",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-09-25": {
+            "1. open": "114.2200",
+            "2. high": "114.8700",
+            "3. low": "114.2200",
+            "4. close": "114.4000",
+            "5. adjusted close": "113.1184",
+            "6. volume": "36567",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-09-22": {
+            "1. open": "113.2100",
+            "2. high": "114.2800",
+            "3. low": "113.2100",
+            "4. close": "114.2200",
+            "5. adjusted close": "112.9404",
+            "6. volume": "5248",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-09-21": {
+            "1. open": "113.5100",
+            "2. high": "114.1400",
+            "3. low": "113.4400",
+            "4. close": "113.4400",
+            "5. adjusted close": "112.1691",
+            "6. volume": "41132",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-09-20": {
+            "1. open": "115.5000",
+            "2. high": "118.3700",
+            "3. low": "114.8600",
+            "4. close": "114.8600",
+            "5. adjusted close": "113.5732",
+            "6. volume": "37486",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-09-19": {
+            "1. open": "114.5000",
+            "2. high": "114.7500",
+            "3. low": "114.5000",
+            "4. close": "114.7500",
+            "5. adjusted close": "113.4644",
+            "6. volume": "219766",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-09-18": {
+            "1. open": "113.1000",
+            "2. high": "114.2500",
+            "3. low": "112.9301",
+            "4. close": "114.2500",
+            "5. adjusted close": "112.9700",
+            "6. volume": "25772",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-09-15": {
+            "1. open": "112.4200",
+            "2. high": "112.9400",
+            "3. low": "111.2800",
+            "4. close": "112.7100",
+            "5. adjusted close": "111.4473",
+            "6. volume": "2055",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-09-14": {
+            "1. open": "113.2500",
+            "2. high": "113.2500",
+            "3. low": "112.7200",
+            "4. close": "112.7500",
+            "5. adjusted close": "111.4869",
+            "6. volume": "88342",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-09-13": {
+            "1. open": "113.3999",
+            "2. high": "113.3999",
+            "3. low": "112.2000",
+            "4. close": "112.3000",
+            "5. adjusted close": "111.0419",
+            "6. volume": "17478",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-09-12": {
+            "1. open": "113.2900",
+            "2. high": "113.6899",
+            "3. low": "112.7500",
+            "4. close": "113.3900",
+            "5. adjusted close": "112.1197",
+            "6. volume": "30954",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-09-11": {
+            "1. open": "112.7000",
+            "2. high": "113.3000",
+            "3. low": "112.5000",
+            "4. close": "113.3000",
+            "5. adjusted close": "112.0307",
+            "6. volume": "151963",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-09-08": {
+            "1. open": "110.6000",
+            "2. high": "113.8700",
+            "3. low": "110.6000",
+            "4. close": "113.6900",
+            "5. adjusted close": "112.4163",
+            "6. volume": "63726",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-09-07": {
+            "1. open": "110.0000",
+            "2. high": "111.7800",
+            "3. low": "110.0000",
+            "4. close": "110.8400",
+            "5. adjusted close": "109.5983",
+            "6. volume": "112675",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-09-06": {
+            "1. open": "110.8700",
+            "2. high": "110.8700",
+            "3. low": "110.0000",
+            "4. close": "110.4000",
+            "5. adjusted close": "109.1632",
+            "6. volume": "12328",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-09-05": {
+            "1. open": "110.9350",
+            "2. high": "111.1700",
+            "3. low": "109.9500",
+            "4. close": "110.4400",
+            "5. adjusted close": "109.2027",
+            "6. volume": "24106",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-09-01": {
+            "1. open": "110.7500",
+            "2. high": "111.0000",
+            "3. low": "109.7500",
+            "4. close": "110.9400",
+            "5. adjusted close": "109.6971",
+            "6. volume": "139850",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-08-31": {
+            "1. open": "109.6900",
+            "2. high": "111.4600",
+            "3. low": "108.2600",
+            "4. close": "110.7400",
+            "5. adjusted close": "109.4994",
+            "6. volume": "81862",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-08-30": {
+            "1. open": "108.5000",
+            "2. high": "108.5000",
+            "3. low": "108.1000",
+            "4. close": "108.5000",
+            "5. adjusted close": "107.2845",
+            "6. volume": "78286",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-08-29": {
+            "1. open": "107.2500",
+            "2. high": "107.9900",
+            "3. low": "107.2500",
+            "4. close": "107.9350",
+            "5. adjusted close": "106.7258",
+            "6. volume": "17678",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-08-28": {
+            "1. open": "108.9500",
+            "2. high": "108.9500",
+            "3. low": "106.5100",
+            "4. close": "107.4800",
+            "5. adjusted close": "106.2759",
+            "6. volume": "7833",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-08-25": {
+            "1. open": "109.5000",
+            "2. high": "109.7000",
+            "3. low": "109.3900",
+            "4. close": "109.7000",
+            "5. adjusted close": "108.4710",
+            "6. volume": "1651",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-08-24": {
+            "1. open": "106.5900",
+            "2. high": "106.8367",
+            "3. low": "105.7700",
+            "4. close": "106.4500",
+            "5. adjusted close": "105.2574",
+            "6. volume": "45602",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-08-23": {
+            "1. open": "106.4500",
+            "2. high": "107.2000",
+            "3. low": "106.2000",
+            "4. close": "106.4000",
+            "5. adjusted close": "105.2080",
+            "6. volume": "30650",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-08-22": {
+            "1. open": "106.1200",
+            "2. high": "107.4700",
+            "3. low": "106.1200",
+            "4. close": "106.7000",
+            "5. adjusted close": "105.5046",
+            "6. volume": "51765",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-08-21": {
+            "1. open": "106.8692",
+            "2. high": "106.8692",
+            "3. low": "105.8400",
+            "4. close": "105.8400",
+            "5. adjusted close": "104.6543",
+            "6. volume": "36188",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-08-18": {
+            "1. open": "107.5600",
+            "2. high": "107.5600",
+            "3. low": "105.7500",
+            "4. close": "106.4500",
+            "5. adjusted close": "105.2574",
+            "6. volume": "349551",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-08-17": {
+            "1. open": "107.7500",
+            "2. high": "107.7500",
+            "3. low": "107.7500",
+            "4. close": "107.7500",
+            "5. adjusted close": "106.5429",
+            "6. volume": "60481",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-08-16": {
+            "1. open": "107.7500",
+            "2. high": "108.3137",
+            "3. low": "105.5250",
+            "4. close": "108.2750",
+            "5. adjusted close": "107.0620",
+            "6. volume": "43047",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-08-15": {
+            "1. open": "107.2200",
+            "2. high": "108.1900",
+            "3. low": "106.9680",
+            "4. close": "107.9700",
+            "5. adjusted close": "106.7604",
+            "6. volume": "4380",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-08-14": {
+            "1. open": "105.7600",
+            "2. high": "108.4400",
+            "3. low": "105.7600",
+            "4. close": "107.9615",
+            "5. adjusted close": "106.7520",
+            "6. volume": "118428",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-08-11": {
+            "1. open": "107.9899",
+            "2. high": "107.9899",
+            "3. low": "105.1800",
+            "4. close": "107.4750",
+            "5. adjusted close": "106.2709",
+            "6. volume": "28609",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-08-10": {
+            "1. open": "106.5000",
+            "2. high": "107.9088",
+            "3. low": "105.0351",
+            "4. close": "107.2300",
+            "5. adjusted close": "106.0287",
+            "6. volume": "9624",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-08-09": {
+            "1. open": "108.2500",
+            "2. high": "108.2500",
+            "3. low": "108.2500",
+            "4. close": "108.2500",
+            "5. adjusted close": "107.0373",
+            "6. volume": "20595",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-08-08": {
+            "1. open": "108.9200",
+            "2. high": "108.9500",
+            "3. low": "108.0000",
+            "4. close": "108.5000",
+            "5. adjusted close": "107.2845",
+            "6. volume": "16597",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-08-07": {
+            "1. open": "109.1000",
+            "2. high": "109.1100",
+            "3. low": "108.8300",
+            "4. close": "109.0550",
+            "5. adjusted close": "107.8332",
+            "6. volume": "1516",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-08-04": {
+            "1. open": "108.0900",
+            "2. high": "109.6900",
+            "3. low": "107.7587",
+            "4. close": "109.6900",
+            "5. adjusted close": "108.4611",
+            "6. volume": "132498",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-08-03": {
+            "1. open": "107.3600",
+            "2. high": "109.7000",
+            "3. low": "107.3600",
+            "4. close": "109.7000",
+            "5. adjusted close": "108.4710",
+            "6. volume": "42524",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-08-02": {
+            "1. open": "108.1200",
+            "2. high": "108.4400",
+            "3. low": "106.5400",
+            "4. close": "107.6820",
+            "5. adjusted close": "106.4756",
+            "6. volume": "69095",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-08-01": {
+            "1. open": "107.1500",
+            "2. high": "108.4900",
+            "3. low": "107.1500",
+            "4. close": "108.2200",
+            "5. adjusted close": "107.0076",
+            "6. volume": "78740",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-07-31": {
+            "1. open": "106.5600",
+            "2. high": "108.6400",
+            "3. low": "106.5600",
+            "4. close": "107.9600",
+            "5. adjusted close": "106.7505",
+            "6. volume": "21667",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-07-28": {
+            "1. open": "108.7100",
+            "2. high": "109.9900",
+            "3. low": "107.3500",
+            "4. close": "107.9900",
+            "5. adjusted close": "106.7802",
+            "6. volume": "28270",
+            "7. dividend amount": "1.3000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-07-27": {
+            "1. open": "107.5500",
+            "2. high": "109.9899",
+            "3. low": "107.5500",
+            "4. close": "109.7000",
+            "5. adjusted close": "107.1808",
+            "6. volume": "105413",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-07-26": {
+            "1. open": "109.9400",
+            "2. high": "109.9899",
+            "3. low": "107.2600",
+            "4. close": "107.2600",
+            "5. adjusted close": "104.7968",
+            "6. volume": "53754",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-07-25": {
+            "1. open": "109.0000",
+            "2. high": "110.0800",
+            "3. low": "108.8100",
+            "4. close": "108.8700",
+            "5. adjusted close": "106.3698",
+            "6. volume": "250233",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-07-24": {
+            "1. open": "110.0700",
+            "2. high": "110.0700",
+            "3. low": "108.1100",
+            "4. close": "108.8100",
+            "5. adjusted close": "106.3112",
+            "6. volume": "336200",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-07-21": {
+            "1. open": "110.1700",
+            "2. high": "113.3000",
+            "3. low": "109.8100",
+            "4. close": "109.8100",
+            "5. adjusted close": "107.2882",
+            "6. volume": "19671",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-07-20": {
+            "1. open": "111.8000",
+            "2. high": "111.8000",
+            "3. low": "110.6900",
+            "4. close": "111.4900",
+            "5. adjusted close": "108.9297",
+            "6. volume": "39513",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-07-19": {
+            "1. open": "111.2600",
+            "2. high": "114.8800",
+            "3. low": "110.5300",
+            "4. close": "111.7500",
+            "5. adjusted close": "109.1837",
+            "6. volume": "55221",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-07-18": {
+            "1. open": "111.0000",
+            "2. high": "111.2500",
+            "3. low": "110.2100",
+            "4. close": "110.2900",
+            "5. adjusted close": "107.7572",
+            "6. volume": "1939",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-07-17": {
+            "1. open": "110.2700",
+            "2. high": "111.7290",
+            "3. low": "110.2700",
+            "4. close": "111.5800",
+            "5. adjusted close": "109.0176",
+            "6. volume": "1513",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-07-14": {
+            "1. open": "110.6000",
+            "2. high": "111.0900",
+            "3. low": "110.2900",
+            "4. close": "110.2900",
+            "5. adjusted close": "107.7572",
+            "6. volume": "15996",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-07-13": {
+            "1. open": "111.7400",
+            "2. high": "111.7400",
+            "3. low": "110.5600",
+            "4. close": "110.7300",
+            "5. adjusted close": "108.1871",
+            "6. volume": "269779",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-07-12": {
+            "1. open": "110.1000",
+            "2. high": "111.5000",
+            "3. low": "110.1000",
+            "4. close": "110.6400",
+            "5. adjusted close": "108.0992",
+            "6. volume": "6502",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-07-11": {
+            "1. open": "110.4200",
+            "2. high": "110.7700",
+            "3. low": "109.0100",
+            "4. close": "110.2300",
+            "5. adjusted close": "107.6986",
+            "6. volume": "64129",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-07-10": {
+            "1. open": "111.6400",
+            "2. high": "111.6400",
+            "3. low": "109.1150",
+            "4. close": "110.6000",
+            "5. adjusted close": "108.0601",
+            "6. volume": "106097",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-07-07": {
+            "1. open": "110.9300",
+            "2. high": "113.9500",
+            "3. low": "109.2200",
+            "4. close": "111.0400",
+            "5. adjusted close": "108.4900",
+            "6. volume": "45079",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-07-06": {
+            "1. open": "111.5000",
+            "2. high": "112.7000",
+            "3. low": "108.8100",
+            "4. close": "110.1100",
+            "5. adjusted close": "107.5813",
+            "6. volume": "189734",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-07-05": {
+            "1. open": "109.0000",
+            "2. high": "112.7200",
+            "3. low": "109.0000",
+            "4. close": "112.7200",
+            "5. adjusted close": "110.1314",
+            "6. volume": "95482",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-07-03": {
+            "1. open": "109.7400",
+            "2. high": "109.7400",
+            "3. low": "109.1700",
+            "4. close": "109.1700",
+            "5. adjusted close": "106.6629",
+            "6. volume": "4496",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-06-30": {
+            "1. open": "108.5000",
+            "2. high": "109.7200",
+            "3. low": "105.4000",
+            "4. close": "109.7200",
+            "5. adjusted close": "107.2003",
+            "6. volume": "8149",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-06-29": {
+            "1. open": "108.4500",
+            "2. high": "109.4900",
+            "3. low": "107.6850",
+            "4. close": "107.8200",
+            "5. adjusted close": "105.3439",
+            "6. volume": "62137",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-06-28": {
+            "1. open": "108.5000",
+            "2. high": "108.8500",
+            "3. low": "108.2600",
+            "4. close": "108.5000",
+            "5. adjusted close": "106.0083",
+            "6. volume": "88759",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-06-27": {
+            "1. open": "109.5000",
+            "2. high": "109.5000",
+            "3. low": "108.2000",
+            "4. close": "108.2000",
+            "5. adjusted close": "105.7152",
+            "6. volume": "78239",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-06-26": {
+            "1. open": "109.2500",
+            "2. high": "109.6000",
+            "3. low": "109.0000",
+            "4. close": "109.2600",
+            "5. adjusted close": "106.7509",
+            "6. volume": "79661",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-06-23": {
+            "1. open": "109.0000",
+            "2. high": "109.4300",
+            "3. low": "108.4700",
+            "4. close": "109.4000",
+            "5. adjusted close": "106.8877",
+            "6. volume": "66909",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-06-22": {
+            "1. open": "108.9300",
+            "2. high": "108.9300",
+            "3. low": "108.3900",
+            "4. close": "108.4700",
+            "5. adjusted close": "105.9790",
+            "6. volume": "65899",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-06-21": {
+            "1. open": "109.2380",
+            "2. high": "109.2380",
+            "3. low": "108.0000",
+            "4. close": "108.1100",
+            "5. adjusted close": "105.6273",
+            "6. volume": "134067",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-06-20": {
+            "1. open": "108.9500",
+            "2. high": "109.7500",
+            "3. low": "108.2532",
+            "4. close": "108.5800",
+            "5. adjusted close": "106.0865",
+            "6. volume": "41302",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-06-19": {
+            "1. open": "107.9900",
+            "2. high": "108.5000",
+            "3. low": "107.4900",
+            "4. close": "108.0200",
+            "5. adjusted close": "105.5393",
+            "6. volume": "190878",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-06-16": {
+            "1. open": "107.2000",
+            "2. high": "107.2000",
+            "3. low": "106.3300",
+            "4. close": "106.5000",
+            "5. adjusted close": "104.0543",
+            "6. volume": "4799",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-06-15": {
+            "1. open": "107.9700",
+            "2. high": "109.7500",
+            "3. low": "107.0500",
+            "4. close": "107.2500",
+            "5. adjusted close": "104.7870",
+            "6. volume": "12689",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-06-14": {
+            "1. open": "107.7500",
+            "2. high": "107.9200",
+            "3. low": "107.1984",
+            "4. close": "107.8900",
+            "5. adjusted close": "105.4123",
+            "6. volume": "155682",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-06-13": {
+            "1. open": "106.7500",
+            "2. high": "107.5100",
+            "3. low": "106.5559",
+            "4. close": "106.7000",
+            "5. adjusted close": "104.2497",
+            "6. volume": "165177",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-06-12": {
+            "1. open": "105.1500",
+            "2. high": "107.4000",
+            "3. low": "105.1500",
+            "4. close": "107.4000",
+            "5. adjusted close": "104.9336",
+            "6. volume": "287376",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-06-09": {
+            "1. open": "103.4700",
+            "2. high": "106.3900",
+            "3. low": "103.4700",
+            "4. close": "106.2331",
+            "5. adjusted close": "103.7935",
+            "6. volume": "27577",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-06-08": {
+            "1. open": "105.2500",
+            "2. high": "107.4980",
+            "3. low": "102.2300",
+            "4. close": "102.2300",
+            "5. adjusted close": "99.8823",
+            "6. volume": "236313",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-06-07": {
+            "1. open": "106.8300",
+            "2. high": "106.8300",
+            "3. low": "104.2300",
+            "4. close": "105.2000",
+            "5. adjusted close": "102.7841",
+            "6. volume": "111929",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-06-06": {
+            "1. open": "102.3200",
+            "2. high": "105.5000",
+            "3. low": "102.3200",
+            "4. close": "105.2900",
+            "5. adjusted close": "102.8720",
+            "6. volume": "239547",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-06-05": {
+            "1. open": "105.6600",
+            "2. high": "105.9700",
+            "3. low": "105.0800",
+            "4. close": "105.0800",
+            "5. adjusted close": "102.6669",
+            "6. volume": "38259",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-06-02": {
+            "1. open": "108.7600",
+            "2. high": "108.7600",
+            "3. low": "104.9869",
+            "4. close": "105.9500",
+            "5. adjusted close": "103.5169",
+            "6. volume": "120582",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-06-01": {
+            "1. open": "105.4400",
+            "2. high": "105.4900",
+            "3. low": "104.7845",
+            "4. close": "105.3400",
+            "5. adjusted close": "102.9209",
+            "6. volume": "161586",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-05-31": {
+            "1. open": "103.9880",
+            "2. high": "104.8400",
+            "3. low": "103.7474",
+            "4. close": "104.2300",
+            "5. adjusted close": "101.8364",
+            "6. volume": "161786",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-05-30": {
+            "1. open": "103.7000",
+            "2. high": "103.9790",
+            "3. low": "103.7000",
+            "4. close": "103.8500",
+            "5. adjusted close": "101.4651",
+            "6. volume": "21766",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-05-26": {
+            "1. open": "103.8400",
+            "2. high": "103.9900",
+            "3. low": "103.5300",
+            "4. close": "103.5300",
+            "5. adjusted close": "101.1525",
+            "6. volume": "55462",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-05-25": {
+            "1. open": "103.5649",
+            "2. high": "103.9000",
+            "3. low": "103.3300",
+            "4. close": "103.9000",
+            "5. adjusted close": "101.5140",
+            "6. volume": "102846",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-05-24": {
+            "1. open": "103.2500",
+            "2. high": "103.8000",
+            "3. low": "102.5000",
+            "4. close": "103.2544",
+            "5. adjusted close": "100.8832",
+            "6. volume": "203339",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-05-23": {
+            "1. open": "103.0000",
+            "2. high": "103.5465",
+            "3. low": "102.9118",
+            "4. close": "102.9118",
+            "5. adjusted close": "100.5485",
+            "6. volume": "51726",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-05-22": {
+            "1. open": "103.5000",
+            "2. high": "103.5000",
+            "3. low": "102.6300",
+            "4. close": "103.1500",
+            "5. adjusted close": "100.7812",
+            "6. volume": "109003",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-05-19": {
+            "1. open": "102.7800",
+            "2. high": "103.9999",
+            "3. low": "102.7100",
+            "4. close": "103.9999",
+            "5. adjusted close": "101.6116",
+            "6. volume": "284432",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-05-18": {
+            "1. open": "102.2440",
+            "2. high": "103.0000",
+            "3. low": "102.1000",
+            "4. close": "103.0000",
+            "5. adjusted close": "100.6346",
+            "6. volume": "461173",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-05-17": {
+            "1. open": "103.2260",
+            "2. high": "103.4500",
+            "3. low": "100.0000",
+            "4. close": "102.6696",
+            "5. adjusted close": "100.3118",
+            "6. volume": "596167",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-05-16": {
+            "1. open": "103.5000",
+            "2. high": "104.0000",
+            "3. low": "103.0000",
+            "4. close": "103.4500",
+            "5. adjusted close": "101.0743",
+            "6. volume": "349211",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-05-15": {
+            "1. open": "102.7500",
+            "2. high": "103.7000",
+            "3. low": "102.5000",
+            "4. close": "103.0000",
+            "5. adjusted close": "100.6346",
+            "6. volume": "897372",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        },
+        "2017-05-12": {
+            "1. open": "103.0300",
+            "2. high": "103.6250",
+            "3. low": "100.0000",
+            "4. close": "102.6500",
+            "5. adjusted close": "100.2927",
+            "6. volume": "6437104",
+            "7. dividend amount": "0.0000",
+            "8. split coefficient": "1.0000"
+        }
+    }
+}

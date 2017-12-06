@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>HWC Calculator Home</title>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet"> 
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
 <script type="text/javascript" src="../js/jquery_3.2.1.js"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
 </head>
@@ -13,25 +13,28 @@
 
 <p>Stock Graph</p>
 
-<div id="container" style="width:100%; height:400px;"></div>
+<div id="container" style="width:100%; height:800px;"></div>
 
 <script>
 	$('document').ready(function(){
 		
+		var symbol = 'MSFT'; //NYSE for right now
+		
 		$.ajax({
-		    url: '../yahooTest.php',
+		    url: '../stockGrapher.php',
 		    type: "POST",
-            data: ({type: 'twoHundredDay'}),
+            data: ({type: 'twoHundredDay', symbol: symbol}),
 		    async: false,
 		    success: function(data) {
 		        useReturnData(data);
+				//console.log(data);
 		    }
 		});
 
 		$.ajax({
-		    url: '../yahooTest.php',
+		    url: '../stockGrapher.php',
 		    type: "POST",
-            data: ({type: 'fiftyDay'}),
+            data: ({type: 'fiftyDay', symbol: symbol}),
 		    async: false,
 		    success: function(data) {
 		        useFiftyData(data);
@@ -39,9 +42,9 @@
 		});
 
 		$.ajax({
-		    url: '../yahooTest.php',
+		    url: '../stockGrapher.php',
 		    type: "POST",
-            data: ({type: 'eightTeenDay'}),
+            data: ({type: 'eightTeenDay', symbol: symbol}),
 		    async: false,
 		    success: function(data) {
 		        useEightData(data);
@@ -49,9 +52,9 @@
 		});
 
 		$.ajax({
-		    url: '../yahooTest.php',
+		    url: '../stockGrapher.php',
 		    type: "POST",
-            data: ({type: 'historicClose2'}),
+            data: ({type: 'historicClose2', symbol: symbol}),
 		    async: false,
 		    success: function(data) {
 		        useHistoricClose(data);
@@ -83,29 +86,28 @@
 		            type: 'line'
 		        },
 		        title: {
-		            text: 'MSFT'
+		            text: symbol
 		        },
 		        yAxis: {
 		            title: {
 		                text: 'Moving Average'
 		            }
 		        },
-		        series: [{
+		        series: [
+				  {
+					name: 'Stock',
+			    	data: window.historic,
+			    	turboThreshold: 0
+			    },{	name: 'SMA18',
+			    	data: window.eight,
+			    	turboThreshold: 0
+			    },{	name: 'SMA50',
+			    	data: window.fifty,
+			    	turboThreshold: 0
+			    },{
 			        name: 'SMA200',
 			        data: window.returns,
 			        turboThreshold: 0
-			    },
-			    {	name: 'SMA50',
-			    	data: window.fifty,
-			    	turboThreshold: 0
-			    },
-			    {	name: 'SMA18',
-			    	data: window.eight,
-			    	turboThreshold: 0
-			    },
-			    {	name: 'Stock',
-			    	data: window.historic,
-			    	turboThreshold: 0
 			    }
 			    ]
 		    });
